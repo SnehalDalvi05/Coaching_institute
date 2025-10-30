@@ -77,7 +77,15 @@ export function About() {
                   blend of conceptual learning, regular practice, and individual attention.
                   Our teaching approach focuses on understanding core concepts, improving problem-solving ability, 
                   and preparing students for academic excellence and competitive exams.
-
+                </p>
+                <h2 className="text-4xl md:text-5xl text-gray-900">
+                Experience
+              </h2>
+              
+                <p>
+                  The founders have more than 8 years of teaching experience. 
+                  SRP Tutorials was established in 2021 with a vision to provide high-quality education 
+                  that builds strong academic foundations and nurtures future achievers.
                 </p>
                 {/* <p>
                   Over the years, we have grown from a small coaching center to one of the most trusted 

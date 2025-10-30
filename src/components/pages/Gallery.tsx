@@ -7,7 +7,7 @@ export function Gallery() {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const [filter, setFilter] = useState<string>('all');
 
-  const categories = ['all', 'Classroom', 'Events', 'Facilities', 'Activities'];
+  const categories = ['all'];
 
   const filteredImages = filter === 'all' 
     ? galleryData 
@@ -29,7 +29,7 @@ export function Gallery() {
             </div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6">Gallery</h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Take a glimpse into life at Responsi Coaching Institute through our vibrant moments
+              Take a glimpse into life at SRP Tutorials through our vibrant moments
             </p>
           </div>
         </div>

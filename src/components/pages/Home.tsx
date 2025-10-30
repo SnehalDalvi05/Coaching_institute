@@ -11,7 +11,7 @@ export function Home({ onNavigate }: HomeProps) {
     { icon: Users, label: 'Students Enrolled', value: '100+' },
     { icon: Award, label: 'Success Rate', value: '99%' },
     { icon: BookOpen, label: 'Subjects Offered', value: '15+' },
-    { icon: TrendingUp, label: 'Years of Excellence', value: '15+' },
+    { icon: TrendingUp, label: 'Years of Excellence', value: '8+' },
   ];
 
   const features = [

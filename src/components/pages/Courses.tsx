@@ -169,7 +169,7 @@ export function Courses({ onNavigate }: CoursesProps) {
               size="lg"
               variant="outline"
               onClick={() => onNavigate('admissions')}
-              className="border-2 border-white text-white hover:bg-white/10 px-8"
+              className="border-2 border-white hover:bg-white/10 px-8"
             >
               View Admission Process
             </Button>
