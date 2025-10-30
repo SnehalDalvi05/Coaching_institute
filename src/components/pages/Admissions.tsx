@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { Calendar, FileText, DollarSign, CheckCircle, ArrowRight, Award, Rocket } from 'lucide-react';
+import { Calendar, FileText, DollarSign, CheckCircle, ArrowRight, Award, Rocket, PersonStanding, User } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
 import { Textarea } from '../ui/textarea';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 export function Admissions() {
   const [formData, setFormData] = useState({
@@ -51,21 +51,21 @@ export function Admissions() {
 
   const scholarships = [
     {
-      title: 'Merit Scholarship',
-      description: 'Up to 50% fee waiver for students with exceptional academic records',
-      eligibility: '90%+ in previous exams',
+      title: 'Every Student Matters',
+      description: 'We believe no student should be left behind — every learner deserves equal care, patience, and motivation.',
+      
       color: 'from-blue-600 to-blue-700',
     },
     {
-      title: 'Early Bird Discount',
+      title: 'Learning Beyond Books',
       description: '15% discount for students who enroll before the deadline',
-      eligibility: 'Register within first week',
+      
       color: 'from-purple-600 to-purple-700',
     },
     {
-      title: 'Sibling Discount',
-      description: '20% discount if you have a sibling already enrolled',
-      eligibility: 'Valid sibling enrollment',
+      title: 'Encouraging Curiosity',
+      description: 'Students are guided to ask questions, explore ideas, and think independently.',
+      
       color: 'from-pink-600 to-pink-700',
     },
   ];
@@ -144,9 +144,9 @@ export function Admissions() {
                   <div className="h-px w-12 bg-blue-600"></div>
                   <span className="text-sm uppercase tracking-wider">Start Now</span>
                 </div>
-                <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">Apply Today</h2>
+                <h2 className="text-4xl md:text-5xl text-gray-900 mb-4">Visit Us Today</h2>
                 <p className="text-xl text-gray-600">
-                  Fill out the form and our counselors will contact you within 24 hours
+                  Here's a sample form you'll be asked to fill out when applying for admission to our coaching institute.
                 </p>
               </div>
 
@@ -184,7 +184,7 @@ export function Admissions() {
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => handleChange('phone', e.target.value)}
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+91 00000-00000"
                       className="mt-2"
                       required
                     />
@@ -197,12 +197,10 @@ export function Admissions() {
                         <SelectValue placeholder="Choose a course" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="engineering">Engineering Entrance</SelectItem>
-                        <SelectItem value="medical">Medical Entrance</SelectItem>
-                        <SelectItem value="foundation">Foundation Course</SelectItem>
-                        <SelectItem value="board">Board Exam Preparation</SelectItem>
-                        <SelectItem value="competitive">Competitive Exams</SelectItem>
-                        <SelectItem value="crash">Crash Course</SelectItem>
+                        <SelectItem value="engineering">1st to 10th Standard – All Subjects</SelectItem>
+                        <SelectItem value="medical">11th & 12th Standard – Science Stream</SelectItem>
+                        <SelectItem value="foundation">11th & 12th Standard – Commerce Stream</SelectItem>
+                        
                       </SelectContent>
                     </Select>
                   </div>
@@ -234,17 +232,19 @@ export function Admissions() {
             <div className="space-y-8">
               {/* Important Dates */}
               <div className="bg-white p-8 rounded-3xl border-2 border-gray-100 shadow-lg">
-                <h3 className="text-2xl text-gray-900 mb-6">Important Dates</h3>
+                <h3 className="text-2xl text-gray-900 mb-6">Documents to Carry</h3>
                 <div className="space-y-6">
                   {[
-                    { label: 'Application Deadline', date: 'December 31, 2025' },
-                    { label: 'Aptitude Test', date: 'January 15, 2026' },
-                    { label: 'Batch Starts', date: 'February 1, 2026' },
+                    {  date: 'Aadhar Card' },
+                    {  date: 'Photo Copies' },
+                    {  date: 'Previous Year Result' },
+                     {  date: 'Parents Information' },
+                      {  date: 'Contact Details' },
                   ].map((item, index) => (
                     <div key={index} className="flex items-start gap-4 pb-6 border-b border-gray-100 last:border-0 last:pb-0">
-                      <Calendar className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
+                      <FileText className="h-6 w-6 text-blue-600 flex-shrink-0 mt-1" />
                       <div>
-                        <div className="text-sm text-gray-600 mb-1">{item.label}</div>
+                        {/* <div className="text-sm text-gray-600 mb-1">{item.label}</div> */}
                         <div className="text-lg text-gray-900">{item.date}</div>
                       </div>
                     </div>
@@ -281,11 +281,11 @@ export function Admissions() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <div className="inline-flex items-center gap-2 text-blue-600 mb-4">
               <div className="h-px w-12 bg-blue-600"></div>
-              <span className="text-sm uppercase tracking-wider">Financial Aid</span>
+              <span className="text-sm uppercase tracking-wider">What We Stand For</span>
             </div>
-            <h2 className="text-4xl md:text-5xl text-gray-900 mb-6">Scholarships Available</h2>
+            <h2 className="text-4xl md:text-5xl text-gray-900 mb-6">Our Commitment</h2>
             <p className="text-xl text-gray-600">
-              We believe in rewarding merit and making quality education accessible to all
+              We promise to make learning an experience that’s personal, practical, and full of growth — inside and outside the classroom.
             </p>
           </div>
           
@@ -295,14 +295,14 @@ export function Admissions() {
                 <div className={`absolute inset-0 bg-gradient-to-br ${scholarship.color} rounded-3xl opacity-0 group-hover:opacity-10 transition-opacity`}></div>
                 <div className="relative p-8 bg-gray-50 rounded-3xl border-2 border-gray-100 hover:border-gray-200 transition-all h-full">
                   <div className={`inline-flex p-4 bg-gradient-to-br ${scholarship.color} rounded-2xl mb-6`}>
-                    <DollarSign className="h-8 w-8 text-white" />
+                    <User className="h-8 w-8 text-white" />
                   </div>
                   <h3 className="text-2xl text-gray-900 mb-4">{scholarship.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{scholarship.description}</p>
-                  <div className="flex items-start gap-2 text-sm text-gray-700 bg-white p-4 rounded-xl">
+                  {/* <div className="flex items-start gap-2 text-sm text-gray-700 bg-white p-4 rounded-xl">
                     <CheckCircle className="h-4 w-4 text-green-600 flex-shrink-0 mt-0.5" />
                     <span>{scholarship.eligibility}</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}

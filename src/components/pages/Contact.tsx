@@ -178,7 +178,7 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <Label htmlFor="subject">Subject *</Label>
+                    <Label htmlFor="subject">Courses *</Label>
                     <Input
                       id="subject"
                       value={formData.subject}
@@ -190,12 +190,12 @@ export function Contact() {
                   </div>
 
                   <div>
-                    <Label htmlFor="message">Message *</Label>
+                    <Label htmlFor="message">Additional Information *</Label>
                     <Textarea
                       id="message"
                       value={formData.message}
                       onChange={(e) => handleChange('message', e.target.value)}
-                      placeholder="Tell us more about your inquiry..."
+                      placeholder="Acadimic goals, hobbies, interests... "
                       className="mt-2"
                       rows={5}
                       required

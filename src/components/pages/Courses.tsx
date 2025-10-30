@@ -152,10 +152,10 @@ export function Courses({ onNavigate }: CoursesProps) {
         </div>
         
         <div className="container mx-auto px-4 text-center relative">
-          <h2 className="text-4xl md:text-5xl mb-6">Not Sure Which Course to Choose?</h2>
+          <h2 className="text-4xl md:text-5xl mb-6">Join Us – It’s Not Just Your Journey, But Ours Too</h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact our expert counselors for personalized guidance on selecting the right course 
-            that aligns with your goals and aspirations
+            Together, we work towards making your learning experience meaningful and successful.
+            Let’s build your future, one step at a time!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -163,7 +163,7 @@ export function Courses({ onNavigate }: CoursesProps) {
               onClick={() => onNavigate('contact')}
               className="bg-white text-gray-900 hover:bg-gray-100 px-8"
             >
-              Get Free Counseling <ArrowRight className="ml-2 h-5 w-5" />
+              Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             <Button
               size="lg"
