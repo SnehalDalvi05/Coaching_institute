@@ -4,7 +4,7 @@ import { Button } from '../ui/button';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { Textarea } from '../ui/textarea';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -29,25 +29,25 @@ export function Contact() {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: ['123 Education Street', 'Knowledge City, ST 12345', 'United States'],
+      details: ['Dr. Babasaheb Ambedkar CHSL, Mhada Colony Road,Near RNA Park, Vasi Naka, Mumbai, Maharashtra 400074.'],
       color: 'from-blue-600 to-blue-700',
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['+1 (555) 123-4567', '+1 (555) 123-4568', 'Mon-Sat: 9 AM - 7 PM'],
+      details: ['7021929355 / 9987136969', 'Mon-Sat: 9 AM - 10 PM'],
       color: 'from-purple-600 to-purple-700',
     },
     {
       icon: Mail,
       title: 'Email Us',
-      details: ['info@responsi.edu', 'admissions@responsi.edu', 'support@responsi.edu'],
+      details: ['info@srptutorials.edu'],
       color: 'from-pink-600 to-pink-700',
     },
     {
       icon: Clock,
       title: 'Office Hours',
-      details: ['Monday - Friday: 9 AM - 7 PM', 'Saturday: 9 AM - 5 PM', 'Sunday: Closed'],
+      details: ['Monday - Friday: 9 AM - 10 PM', 'Saturday: 9 AM - 7 PM'],
       color: 'from-indigo-600 to-indigo-700',
     },
   ];
@@ -158,7 +158,7 @@ export function Contact() {
                         type="tel"
                         value={formData.phone}
                         onChange={(e) => handleChange('phone', e.target.value)}
-                        placeholder="+1 (555) 000-0000"
+                        placeholder="+91 00000-0000"
                         className="mt-2"
                       />
                     </div>
@@ -171,7 +171,7 @@ export function Contact() {
                       type="email"
                       value={formData.email}
                       onChange={(e) => handleChange('email', e.target.value)}
-                      placeholder="john@example.com"
+                      placeholder="hehe@gmail.com"
                       className="mt-2"
                       required
                     />
@@ -221,7 +221,9 @@ export function Contact() {
                   <div className="text-center text-gray-600">
                     <MapPin className="h-16 w-16 mx-auto mb-4 text-blue-600" />
                     <p className="text-lg mb-1">Our Location</p>
-                    <p className="text-sm">123 Education Street, Knowledge City</p>
+                    <p className="text-sm">Dr. Babasaheb Ambedkar CHSL, Mhada Colony Road,
+                      Near RNA Park, Vasi Naka, Mumbai, Maharashtra 400074.
+                    </p>
                   </div>
                 </div>
               </div>
